@@ -200,7 +200,7 @@
     <div class="row">
     <div class="col-xs-12 col-sm-12">
     <div class="panel panel-default" id="headings" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-      <div class="panel-heading" style="background-color: red;color: white; font-size: 18px;"><i class="fas fa-truck-loading"></i> &nbsp;Reschedule Requests</div>
+      <div class="panel-heading" style="background-color: #000099;color: white; font-size: 18px;"><i class="far fa-calendar-alt"></i> &nbsp;Rescheduled Requests</div>
       <div class="panel-body" id="serviceDisplay" style="overflow-y: auto;height: 450px;">
   
   <script type="text/javascript">

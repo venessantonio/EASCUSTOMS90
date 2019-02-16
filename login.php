@@ -254,24 +254,24 @@ if (isset($_SESSION['username'])) {
 
                     <div class="col-md-4 col-sm-4">
                          <div class="footer-thumb"> 
-                              <p class="wow fadeInUp" data-wow-delay="0.4s" style="font-size:2vw; color:#404040; font-weight: bold; letter-spacing: 2px;">Contact Info</p>
+                              <p class="wow fadeInUp" data-wow-delay="0.4s" style="font-size:30px; color:#404040; font-weight: bold; letter-spacing: 2px;">Contact Info</p>
                               <br>
                               <div class="contact-info">
-                                   <p style="font-size:1vw;"><i class="fas fa-phone" style="font-size:1.3vw; color:#404040"></i> &nbsp;&nbsp;+639257196568 / +639304992021</p>
-                                   <p style="font-size:1vw;"><i class="fas fa-envelope" style="font-size:1.3vw; color:#404040"></i> &nbsp;&nbsp;eascustoms@yahoo.com</p>
-                                  <p style="font-size:1vw;"><i class="fab fa-facebook-square" style="font-size:1.3vw; color:#404040"></i> &nbsp;&nbsp;EAS Customs / @eascustoms75</p>
+                                   <p><i class="fas fa-phone" style="font-size:20px;color:#404040"></i> &nbsp;&nbsp;+639257196568 / +639304992021</p>
+                                   <p><i class="fas fa-envelope" style="font-size:20px;color:#404040"></i> <a href="#"> &nbsp;&nbsp;eascustoms@yahoo.com</a></p>
+                                   <p><i class="fab fa-facebook-square" style="font-size:20px;color:#404040"></i> <a href="#"> &nbsp;&nbsp;EAS Customs / @eascustoms75</a>
                               </div>
                          </div>
                     </div>
 
                     <div class="col-md-4 col-sm-4"> 
                          <div class="footer-thumb"> 
-                            <p class="wow fadeInUp" data-wow-delay="0.4s" style="font-size:2vw; color:#404040; font-weight: bold; letter-spacing: 2px;">Opening Hours</p>
+                            <p class="wow fadeInUp" data-wow-delay="0.4s" style="font-size:30px; color:#404040; font-weight: bold; letter-spacing: 2px;">Opening Hours</p>
                             <br> 
                             <div class="contact-info">
-                               <p style="font-size:1vw;"><i class="fas fa-calendar-check" style="font-size:1.3vw;color:#404040"></i> &nbsp;&nbsp;Monday - Saturday <span style="font-weight:bold;">09:00 AM - 05:00 PM</span></p>
-                               <p style="font-size:1vw;"><i class="fas fa-calendar-times" style="font-size:1.3vw;color:#404040"></i> &nbsp;&nbsp;Sunday <span style="font-weight:bold;">Closed</span></p>
-                               <p style="font-size:1vw;"><i class="fas fa-clock" style="font-size:1.3vw; color:#404040"></i> &nbsp;&nbsp;GMT+8
+                               <p><i class="fas fa-calendar-check" style="font-size:20px;color:#404040"></i> &nbsp;&nbsp;Monday - Saturday <span style="font-weight:bold;">09:00 AM - 05:00 PM</span></p>
+                               <p><i class="fas fa-calendar-times" style="font-size:20px;color:#404040"></i> &nbsp;&nbsp;Sunday <span style="font-weight:bold;">Closed</span></p>
+                               <p><i class="fas fa-clock" style="font-size:20px;color:#404040"></i> &nbsp;&nbsp;GMT+8
 
                             </div> 
 

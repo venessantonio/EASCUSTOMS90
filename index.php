@@ -165,9 +165,9 @@ include 'process/databaseconnect.php';
                              <br>
                              <br>
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
-                                   <p style="text-align: justify;text-justify: inter-word; font-size:1.3vw; color:#4d4d4d;">EAS customs is a family-owned business located at #08 Regidor St., Pacdal Baguio City, Benguet. The shop was formerly known as “Toot’s Auto Repair Shop”. The business began as a small-time automotive repair shop in the year 2002. The shop catered mechanical works and was only using the garage of the owner’s house. “Toot’s Auto Repair Shop” was changed to “Enriques A. Simeon Auto Repair Shop” which was named after the owner of the company.</p>
+                                   <p style="text-align: justify;text-justify: inter-word; font-size:17px; color:#4d4d4d;">EAS customs is a family-owned business located at #08 Regidor St., Pacdal Baguio City, Benguet. The shop was formerly known as “Toot’s Auto Repair Shop”. The business began as a small-time automotive repair shop in the year 2002. The shop catered mechanical works and was only using the garage of the owner’s house. “Toot’s Auto Repair Shop” was changed to “Enriques A. Simeon Auto Repair Shop” which was named after the owner of the company.</p>
                                   <br>
-                                   <p style="text-align: justify;text-justify: inter-word; font-size:1.3vw; color:#4d4d4d;">The shop is one of the few auto repair shops that specializes in American and European-made automobiles (eg. BMW, Opel, Ford, Mini Cooper, Mercedes Benz, Chevrolet, and Cadillac).</p>
+                                   <p style="text-align: justify;text-justify: inter-word; font-size:17px; color:#4d4d4d;">The shop is one of the few auto repair shops that specializes in American and European-made automobiles (eg. BMW, Opel, Ford, Mini Cooper, Mercedes Benz, Chevrolet, and Cadillac).</p>
                               </div>
                               <figure class="profile wow fadeInUp" data-wow-delay="1s">
                               </figure>
@@ -200,7 +200,7 @@ include 'process/databaseconnect.php';
                             echo '
                             <tr>
                                 <td>
-                                <img class="img-responsive" style="max-width:100%; height:32%;" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
+                                <img class="img-responsive" style="width:100%; height:32%;" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
                                 </td>
                             <tr>
                             <div class="news-info">
@@ -225,7 +225,7 @@ include 'process/databaseconnect.php';
                             echo '
                             <tr>
                                 <td>
-                                <img class="img-responsive" style="max-width:100%; height:32%;" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
+                                <img class="img-responsive" style="width:100%; height:32%;" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
                                 </td>
                             <tr>
                             <div class="news-info">
@@ -249,7 +249,7 @@ include 'process/databaseconnect.php';
                             echo '
                             <tr>
                                 <td>
-                                <img class="img-responsive" style="max-width:100%; height:32%;" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
+                                <img class="img-responsive" style="width:100%; height:32%;" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
                                 </td>
                             <tr>
                             <div class="news-info">
@@ -286,7 +286,7 @@ include 'process/databaseconnect.php';
                             echo '
                             <tr>
                                 <td>
-                                <img class="img-responsive" style="max-width:100%; height:32%;" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
+                                <img class="img-responsive" style="width:100%; height:32%;" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
                                 </td>
                             <tr>
                             <div class="news-info">
@@ -310,7 +310,7 @@ include 'process/databaseconnect.php';
                             echo '
                             <tr>
                                 <td>
-                                <img class="img-responsive" style="max-width:100%; height:32%;" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
+                                <img class="img-responsive" style="width:100%; height:32%;" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
                                 </td>
                             <tr>
                             <div class="news-info">
@@ -335,7 +335,7 @@ include 'process/databaseconnect.php';
                             echo '
                             <tr>
                                 <td>
-                                <img class="img-responsive" style="max-width:100%; height:32%;" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
+                                <img class="img-responsive" style="width:100%; height:32%;" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
                                 </td>
                             <tr>
                             <div class="news-info">
@@ -380,7 +380,7 @@ include 'process/databaseconnect.php';
                             echo '
                             <tr>
                                 <td>
-                                <img class="img-responsive" style="max-width:100%; height:32%;" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
+                                <img class="img-responsive" style="width:100%; height:32%;" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
                                 </td>
                             <tr>
                             <div class="news-info">
@@ -402,7 +402,7 @@ include 'process/databaseconnect.php';
                             echo '
                             <tr>
                                 <td>
-                                <img class="img-responsive" style="max-width:100%; height:32%;" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
+                                <img class="img-responsive" style="width:100%; height:32%;" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
                                 </td>
                             <tr>
                             <div class="news-info">
@@ -424,7 +424,7 @@ include 'process/databaseconnect.php';
                             echo '
                             <tr>
                                 <td>
-                                <img class="img-responsive" style="max-width:100%; height:32%;" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
+                                <img class="img-responsive" style="width:100%; height:32%;" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
                                 </td>
                             <tr>
                             <div class="news-info">
@@ -462,7 +462,7 @@ include 'process/databaseconnect.php';
                             echo '
                             <tr>
                                 <td>
-                                <img class="img-responsive" style="height:63.5%; max-width:100%" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
+                                <img class="img-responsive" style="width:100%; height:63.5%;" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
                                 </td>
                             <tr>
                             <div class="news-info">
@@ -486,7 +486,7 @@ include 'process/databaseconnect.php';
                             echo '
                             <tr>
                                 <td>
-                                <img class="img-responsive" style="height:63.5%; max-width:100%" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
+                                <img class="img-responsive" style="width:100%; height:63.5%;" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
                                 </td>
                             <tr>
                             <div class="news-info">
@@ -510,7 +510,7 @@ include 'process/databaseconnect.php';
                             echo '
                             <tr>
                                 <td>
-                                <img class="img-responsive" style="height:63.5%; max-width:100%" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
+                                <img class="img-responsive" style="width:100%; height:63.5%;" src ="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>
                                 </td>
                             <tr>
                             <div class="news-info">
