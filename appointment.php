@@ -172,245 +172,225 @@ $personalinfo -> personal_info();
      </section>
 
   <!-- Start of APPOINTMENT SECTION --> 
-    <div id="appointment-section">
+    <div id="appointment-section" style="background-color: #b80011; background: -webkit-linear-gradient(-135deg, #f06d06, #B80011); background: -o-linear-gradient(-135deg, #f06d06, #B80011); background: -moz-linear-gradient(-135deg, #f06d06, #B80011); background: linear-gradient(-135deg, #f06d06, #B80011);">
         <div class="container">
             <div class="row">
-                  
-                    
-           
-        <!--LEFT SECTION-->   
-         <div class="col-xs-12 col-sm-12 " style="width:70%; padding:3px;
-           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            text-align: center; background-color: white; border-radius: 8px;">
-             
-              <form method="post" id="appointment_form">
-                <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="panel-heading" style="text-align:center; background-color: #b80011; background: -webkit-linear-gradient(-135deg, #f06d06, #B80011); background: -o-linear-gradient(-135deg, #f06d06, #B80011); background: -moz-linear-gradient(-135deg, #f06d06, #B80011); background: linear-gradient(-135deg, #f06d06, #B80011);color: white; font-size: 22px;">Make an appointment</div>
-                </div>
-                <div class="wow fadeInUp box" data-wow-delay="0.2s" style="width: auto; padding:5px;">
-                  
-                    <!-- Select Car -->
-                   <p style="text-align: justify; padding-left:15px; font-size:20px; color:#333333; font-weight: bold;"><i class="fas fa-car"></i> &nbsp;Select Car</p>
-                    
-                    <hr style="border-color: #b80011; border-top: 2px solid #b80011;">
-                     <div class="panel-body" style="overflow-y: auto; height: 100px;">
-                                  <select class="form-control" name="vehicle" id="vehicle" style="background-color:#ebecee;font-family: 'Poppins', sans-serif;">
-                                                  <option value=" " selected disabled>Choose your Vehicle</option>
-                                                  <?php foreach($vehicles as $vehicle): ?>
-                                                  <option value="<?= $vehicle['id']; ?>"><?= $vehicle['plateNumber']; ?> <?= ucfirst($vehicle['make']); ?> <?= ucfirst($vehicle['series']); ?></option>
-                                                  <?php endforeach; ?>                                                  
-                                    </select>
-                                </div>
-                   
-                    <!-- Select Service -->
-                   <p style="text-align: justify; padding-left:15px; font-size:20px; color:#333333; font-weight: bold;"><i class="fas fa-cogs"></i> &nbsp;Select Service</p>
-                    <hr style="border-color: #b80011; border-top: 2.5px solid #b80011;">
-
-                        <div class="panel-body">
-                         <div class ="services" >
-                          <ul style="text-align:justify; font-size:17px;">
-                            <li><a role="button" id="mechanical" >Mechanical</a></li>
-                            <li><a role="button" id="electrical">Electrical</a></li>
-                            <li><a role="button" id="customize">Customize</a></li>
-                            <li><a role="button" id="bodyRepair">Body Repair</a></li>
-                            <li><a role="button" id="painting">Body Paint</a></li>
-                            <li><a role="button" id="maintenance">Maintenance</a></li>
-                           </ul>
-                          </div>
-                          <br>
-<div class="service-detail" id="mechanical_service" style="display: none; text-align:justify;">    
-                          <?php
-                          if ($mechanicalservicearrayCheck > 0) {
-                            while ($mechanicalservice = mysqli_fetch_assoc($mechanicalservicearray)) {
-                          ?>
-                           <div class="col-md-4 col-sm-4">
-                               <input type="checkbox" name="service[]" id="<?= $mechanicalservice['serviceName']; ?>"  value="<?= $mechanicalservice['serviceName']; ?>"><?= $mechanicalservice['serviceName']; ?><br>
-                               </div>
-                          <?php 
-                            }
-                          }else{
-                              ?>
-                                 <p> NO MECHANICAL SERVICE </p>
-                              <?php
-                              }
-                              ?> 
-                            </div>
-                        
-                            <div class="service-detail" id="electrical_service" style="display: none; text-align:justify;">
-                          <?php
-                          if ($electricalservicearrayCheck > 0) {
-                            while ($electricalservice = mysqli_fetch_assoc($electricalservicearray)) {
-                          ?>
-                           <div class="col-md-4 col-sm-4">
-                               <input type="checkbox" name="service[]" id="<?= $electricalservice['serviceName']; ?>"  value="<?= $electricalservice['serviceName']; ?>"><?= $electricalservice['serviceName']; ?><br>
-                               </div>
-                          <?php 
-                            }
-                          }else{
-                              ?>
-                                 <p> NO ELECTRICAL SERVICE </p>
-                              <?php
-                              }
-                              ?> 
-                         </div>
-                        
-                         <div class="service-detail" id="paint_service" style="display: none; text-align:justify;">
-                          <?php
-                          if ($paintservicearrayCheck > 0) {
-                            while ($paintservice = mysqli_fetch_assoc($paintservicearray)) {
-                          ?>
-                           <div class="col-md-4 col-sm-4">
-                               <input type="checkbox" name="service[]" id="<?= $paintservice['serviceName']; ?>"  value="<?= $paintservice['serviceName']; ?>"><?= $paintservice['serviceName']; ?><br>
-                               </div>
-                          <?php 
-                            }
-                          }else{
-                              ?>
-                                 <p> NO PAINT SERVICE </p>
-                              <?php
-                              }
-                              ?>       
-<!--                               <?php
-                              if(isset($paintservice->paint_service)){
-                               foreach($paintservice->paint_service as $paintservice):
-                              ?>  
-                               <div class="col-md-4 col-sm-4">
-                               <input type="checkbox" name="service[]" id="<?= $paintservice['serviceName']; ?>"  value="<?= $paintservice['serviceName']; ?>"><?= $paintservice['serviceName']; ?><br>
-                               </div>
-                              <?php 
-                                endforeach; 
-                              }else{
-                              ?>
-                                 <p> NO PAINT SERVICE </p>
-                              <?php
-                              }
-                              ?> -->       
-                         </div>
-                    
-                        <div class="service-detail" id="body_Repair" style="display: none; text-align:justify;">
-                               <input type="checkbox" name="service[]" value="Body Repair">Request for Body Repair.
-                              <br><br> 
-                        </div>
-                         <div class="service-detail" id="customization" style="display: none; text-align:justify;">
-                               <input type="checkbox" name="service[]" value="Customize">Request for Customization.
-                              <br><br> 
-                         </div>
-
-                         <div class="service-detail" id="maintenance" style="display: none; text-align:justify;">
-                               <input type="checkbox" name="service[]" value="Maintenance">Request for Maintenance.
-                              <br><br> 
-                         </div>
-                  </div>
-                    
-                    
-                    
-                    <!-- Other Service -->
-                   <p style="text-align: justify; padding-left:15px; font-size:17px; color:#333333; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-cogs"></i> &nbsp;Other Service</p>
-                    <div class="panel-body">
-                        <textarea class="form-control" rows="5" id="otherService" name="otherService" placeholder="Others" style="background-color:#ebecee;"></textarea>
-                      </div>
-                    
-                    <!-- Select Date -->
-                           <?php foreach($personalinfo->personal_info as $personalinfo):?>
-                              <input type="hidden" id="personalId" name="personalId" value="<?= $personalinfo['personalId']; ?>">
-                            <?php endforeach; ?>   
-              
-                          <script type="text/javascript">
-                           var unavailableDates  = [<?php
-                           foreach($appointmentinfo->appointment_info as $appointmentinfo):
-                           ?>"<?= date('d-n-o', strtotime($appointmentinfo['date'])); ?>",
-                          <?php     
-                            endforeach;
-                          ?>];
-
-                           function unavailable(date) {
-                           dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
-                           if ($jq171.inArray(dmy, unavailableDates) == -1) {
-                            return [true, ""];
-                            } else {
-                            return [false, "", "Unavailable"];
-                            }
-                           }
-
-                           function noWeekend(date){
-                            var noWeekend = $jq171.datepicker.noWeekends(date);
-                            return noWeekend[0] ? unavailable(date) : noWeekend;
-                           }
-
-                          $jq171(function(){
-                            $jq171('#datepicker').datepicker({
-                              dateFormat: 'yy-m-d',
-                              minDate: 1,
-                              beforeShowDay: noWeekend, //eto yung date para sa disabled dates
-                              inline: true,
-                              //nextText: '&rarr;',
-                              //prevText: '&larr;',
-                              showOtherMonths: true,
-                              //dateFormat: 'dd MM yy',
-                              dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-                              //showOn: "button",
-                              //buttonImage: "img/calendar-blue.png",
-                              //buttonImageOnly: true,
-                            });
-                          });
-
-                          </script>
-
-                      
-                   <p style="text-align: justify; padding-left:15px; font-size:20px; color:#333333; font-weight: bold;"><i class="fas fa-calendar-check"></i> &nbsp;Select Date</p>
-                    <hr style="border-color: #b80011; border-top: 2.5px solid #b80011;">
-                    <div class="panel-body">
-                    <div class="row">
-                    <div class="col-sm-3" id="date_body">
-                    <b><input type="text" style="font-family: 'Poppins', sans-serif;cursor: pointer;" id="datepicker" name="date" class="form-control" readonly></b>
-                    
-                    </div>
-                    </div>
-                    </div>
-                  
-                          
-                  <!-- Additional Message -->
-                   <p style="text-align: justify; padding-left:15px; font-size:20px; color:#333333; font-weight: bold;"><i class="fas fa-envelope"></i> &nbsp;Additional Message</p>
-                    <hr style="border-color: #b80011; border-top: 2.5px solid #b80011;">
-                    <div class="panel-body">
-                    <textarea class="form-control" name="additionalMessage" rows="5" id="additionalMessage" name="message" placeholder="Message" style="background-color:#ebecee;"></textarea>
-                  </div>
-                    
-                    
                 
-                 
-                    </div>
-                     <div class="form-group" style="text-align: center;">
-                      <br>
-                      <input type="submit" name="post" id="cf-submit" class="btn btn-danger" value="SUBMIT" style="width: 25%; font-size:17px; font-family: 'Poppins', sans-serif;" />
-                    </div>
-                    <br>
-             
+            <form method="post" id="appointment_form">
+                <div class="col-md-7 col-sm-7" style="margin-left:1%; margin-right:3%; padding:3px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center; background-color: white; border-radius: 8px;">
+                    <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="panel-heading" style="background-color: #333;color: white; text-align: center; font-size: 155%; font-weight: bold; letter-spacing: 7px;">MAKE AN APPOINTMENT</div>
+                        
+                        <div class="wow fadeInUp box" data-wow-delay="0.2s" style="width: auto; padding:5px;">
+                            <!-- Select Car -->
+                            <p style="text-align: justify; padding-left:15px; font-size:20px; color:#333333; font-weight: bold;"><i class="fas fa-car"></i> &nbsp;Select Car</p>
 
-                    </div>
+                                <hr style="border-color: #333; border-top: 2px solid #333;">
+                                 <div class="panel-body" style="overflow-y: auto; height: 100px;">
+                                              <select class="form-control" name="vehicle" id="vehicle" style="background-color:#ebecee;font-family: 'Poppins', sans-serif;">
+                                                              <option value=" " selected disabled>Choose your Vehicle</option>
+                                                              <?php foreach($vehicles as $vehicle): ?>
+                                                              <option value="<?= $vehicle['id']; ?>"><?= $vehicle['plateNumber']; ?> <?= ucfirst($vehicle['make']); ?> <?= ucfirst($vehicle['series']); ?></option>
+                                                              <?php endforeach; ?>                                                  
+                                                </select>
+                                            </div>
+
+                                <!-- Select Service -->
+                               <p style="text-align: justify; padding-left:15px; font-size:20px; color:#333333; font-weight: bold;"><i class="fas fa-cogs"></i> &nbsp;Select Service</p>
+                                <hr style="border-color: #333; border-top: 2.5px solid #333;">
+
+                                    <div class="panel-body">
+                                     <div class ="services" >
+                                      <ul style="text-align:justify; font-size:17px;">
+                                        <li><a role="button" id="mechanical" >Mechanical</a></li>
+                                        <li><a role="button" id="electrical">Electrical</a></li>
+                                        <li><a role="button" id="customize">Customize</a></li>
+                                        <li><a role="button" id="bodyRepair">Body Repair</a></li>
+                                        <li><a role="button" id="painting">Body Paint</a></li>
+                                       </ul>
+                                      </div>
+                                      <br>
+                                    <div class="service-detail" id="mechanical_service" style="display: none; text-align:justify;">    
+                                      <?php
+                                      if ($mechanicalservicearrayCheck > 0) {
+                                        while ($mechanicalservice = mysqli_fetch_assoc($mechanicalservicearray)) {
+                                      ?>
+                                       <div class="col-md-4 col-sm-4">
+                                           <input type="checkbox" name="service[]" id="<?= $mechanicalservice['serviceName']; ?>"  value="<?= $mechanicalservice['serviceName']; ?>"><?= $mechanicalservice['serviceName']; ?><br>
+                                           </div>
+                                      <?php 
+                                        }
+                                      }else{
+                                          ?>
+                                             <p> NO MECHANICAL SERVICE </p>
+                                          <?php
+                                          }
+                                          ?> 
+                                        </div>
+
+                                        <div class="service-detail" id="electrical_service" style="display: none; text-align:justify;">
+                                      <?php
+                                      if ($electricalservicearrayCheck > 0) {
+                                        while ($electricalservice = mysqli_fetch_assoc($electricalservicearray)) {
+                                      ?>
+                                       <div class="col-md-4 col-sm-4">
+                                           <input type="checkbox" name="service[]" id="<?= $electricalservice['serviceName']; ?>"  value="<?= $electricalservice['serviceName']; ?>"><?= $electricalservice['serviceName']; ?><br>
+                                           </div>
+                                      <?php 
+                                        }
+                                      }else{
+                                          ?>
+                                             <p> NO ELECTRICAL SERVICE </p>
+                                          <?php
+                                          }
+                                          ?> 
+                                     </div>
+
+                                     <div class="service-detail" id="paint_service" style="display: none; text-align:justify;">
+                                      <?php
+                                      if ($paintservicearrayCheck > 0) {
+                                        while ($paintservice = mysqli_fetch_assoc($paintservicearray)) {
+                                      ?>
+                                       <div class="col-md-4 col-sm-4">
+                                           <input type="checkbox" name="service[]" id="<?= $paintservice['serviceName']; ?>"  value="<?= $paintservice['serviceName']; ?>"><?= $paintservice['serviceName']; ?><br>
+                                           </div>
+                                      <?php 
+                                        }
+                                      }else{
+                                          ?>
+                                             <p> NO PAINT SERVICE </p>
+                                          <?php
+                                          }
+                                          ?>       
+            <!--                               <?php
+                                          if(isset($paintservice->paint_service)){
+                                           foreach($paintservice->paint_service as $paintservice):
+                                          ?>  
+                                           <div class="col-md-4 col-sm-4">
+                                           <input type="checkbox" name="service[]" id="<?= $paintservice['serviceName']; ?>"  value="<?= $paintservice['serviceName']; ?>"><?= $paintservice['serviceName']; ?><br>
+                                           </div>
+                                          <?php 
+                                            endforeach; 
+                                          }else{
+                                          ?>
+                                             <p> NO PAINT SERVICE </p>
+                                          <?php
+                                          }
+                                          ?> -->       
+                                     </div>
+
+                                    <div class="service-detail" id="body_Repair" style="display: none; text-align:justify;">
+                                           <input type="checkbox" name="service[]" value="Body Repair">Request for Body Repair.
+                                          <br><br> 
+                                    </div>
+                                     <div class="service-detail" id="customization" style="display: none; text-align:justify;">
+                                           <input type="checkbox" name="service[]" value="Customize">Request for Customization.
+                                          <br><br> 
+                                     </div>
+
+                                     <div class="service-detail" id="maintenance" style="display: none; text-align:justify;">
+                                           <input type="checkbox" name="service[]" value="Maintenance">Request for Maintenance.
+                                          <br><br> 
+                                     </div>
+                              </div>
 
 
-                    <!--RIGHT SECTION-->    
-                    <div class="col-xs-12 col-sm-12" style="margin-left:58%; width:25%; padding:3px;
-                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                    text-align: center; background-color: white; border-radius: 8px; position:fixed;">
 
-                     <!-- Selected Services -->
-                        <div class="panel-heading" style="text-align:center; background-color: #b80011; background: -webkit-linear-gradient(-135deg, #f06d06, #B80011); background: -o-linear-gradient(-135deg, #f06d06, #B80011); background: -moz-linear-gradient(-135deg, #f06d06, #B80011); background: linear-gradient(-135deg, #f06d06, #B80011);color: white; font-size: 18px;">Services Selected</div> 
-                         <div class="panel-body" id="serviceDisplay">
+                                <!-- Other Service -->
+                               <p style="text-align: justify; padding-left:15px; font-size:17px; color:#333333; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-cogs"></i> &nbsp;Other Service</p>
+                                <div class="panel-body">
+                                    <textarea class="form-control" rows="5" id="otherService" name="otherService" placeholder="Others" style="background-color:#ebecee;"></textarea>
+                                  </div>
+
+                                <!-- Select Date -->
+                                       <?php foreach($personalinfo->personal_info as $personalinfo):?>
+                                          <input type="hidden" id="personalId" name="personalId" value="<?= $personalinfo['personalId']; ?>">
+                                        <?php endforeach; ?>   
+
+                                      <script type="text/javascript">
+                                       var unavailableDates  = [<?php
+                                       foreach($appointmentinfo->appointment_info as $appointmentinfo):
+                                       ?>"<?= date('d-n-o', strtotime($appointmentinfo['date'])); ?>",
+                                      <?php     
+                                        endforeach;
+                                      ?>];
+
+                                       function unavailable(date) {
+                                       dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
+                                       if ($jq171.inArray(dmy, unavailableDates) == -1) {
+                                        return [true, ""];
+                                        } else {
+                                        return [false, "", "Unavailable"];
+                                        }
+                                       }
+
+                                       function noWeekend(date){
+                                        var noWeekend = $jq171.datepicker.noWeekends(date);
+                                        return noWeekend[0] ? unavailable(date) : noWeekend;
+                                       }
+
+                                      $jq171(function(){
+                                        $jq171('#datepicker').datepicker({
+                                          dateFormat: 'yy-m-d',
+                                          minDate: 1,
+                                          beforeShowDay: noWeekend, //eto yung date para sa disabled dates
+                                          inline: true,
+                                          //nextText: '&rarr;',
+                                          //prevText: '&larr;',
+                                          showOtherMonths: true,
+                                          //dateFormat: 'dd MM yy',
+                                          dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                                          //showOn: "button",
+                                          //buttonImage: "img/calendar-blue.png",
+                                          //buttonImageOnly: true,
+                                        });
+                                      });
+
+                                      </script>
+
+
+                               <p style="text-align: justify; padding-left:15px; font-size:20px; color:#333333; font-weight: bold;"><i class="fas fa-calendar-check"></i> &nbsp;Select Date</p>
+                                <hr style="border-color: #333; border-top: 2.5px solid #333;">
+                                <div class="panel-body">
+                                <div class="row">
+                                <div class="col-sm-3" id="date_body">
+                                <b><input type="text" style="font-family: 'Poppins', sans-serif;cursor: pointer;" id="datepicker" name="date" class="form-control" readonly></b>
+
+                                </div>
+                                </div>
+                                </div>
+
+
+                              <!-- Additional Message -->
+                               <p style="text-align: justify; padding-left:15px; font-size:20px; color:#333333; font-weight: bold;"><i class="fas fa-envelope"></i> &nbsp;Additional Message</p>
+                                <hr style="border-color: #333; border-top: 2.5px solid #333;">
+                                <div class="panel-body">
+                                <textarea class="form-control" name="additionalMessage" rows="5" id="additionalMessage" name="message" placeholder="Message" style="background-color:#ebecee;"></textarea>
+                                </div>    
                         </div>
-                    </div>
-                      
-             </form>
-        </div>      
-    </div> 
-</div>
-
-   
-   <!-- END OF APPOINTMENT SECTION -->
-
+                       <div class="form-group" style="text-align: center;">
+                          <br>
+                          <input type="submit" name="post" id="cf-submit" class="btn btn-danger" value="SUBMIT" style="width: 25%; font-size:17px; font-family: 'Poppins', sans-serif;" />
+                        </div>
+                    </div>   
+                </div>
+                
+                <div class="col-md-4 col-sm-4" style="margin-right:3%;margin-left:1%; margin-top:5%; padding:3px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); text-align: center; background-color: white; border-radius: 8px;">
+                    <!-- Selected Services -->
+                    <div class="panel-heading" style="background-color: #333; color: white; text-align: center; font-size: 150%; font-weight: bold; letter-spacing: 7px;">Services Selected</div> 
+                    <div class="panel-body" id="serviceDisplay">
+                        
+                    </div> 
+                </div>
+            </form>
+                
+            </div>
+        </div>
+    </div>
+   <!-- END OF APPOINTMENT SECTION -->  
+    
      <!-- FOOTER -->
-<footer data-stellar-background-ratio="5">
+    <footer data-stellar-background-ratio="5">
           <div class="container">
                <div class="row">
 

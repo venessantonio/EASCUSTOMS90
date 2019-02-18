@@ -35,20 +35,22 @@
                
           </div>
      </section>
- <!-- HEADER -->
+
+
+     <!-- HEADER -->
      <header>
           <div class="container">
                <div class="row">
 
                     <div class="col-md-4 col-sm-5">
-                        <span class="email-icon"><i class="fas fa-user-circle"></i> <a href="login.php">LOGIN</a></span>
-                        <span class="email-icon"><i class="fas fa-id-card"></i> <a href="register.php">REGISTER</a></span>
+                        <span class="email-icon"><i class="fas fa-user-circle" aria-hidden="true"></i> <a href="login.php">LOGIN</a></span>
+                        <span class="email-icon"><i class="fas fa-id-card" aria-hidden="true"></i> <a href="register.php">REGISTER</a></span>
                     </div>
                          
                     <div class="col-md-8 col-sm-7 text-align-right">
                          <span class="phone-icon"><i class="fa fa-phone"></i>  +639257196568 / +639304992021</span>
-                         <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 6:00 AM - 10:00 PM (Mon-Sat)</span>
-                         <span class="email-icon"><i class="fab fa-facebook"></i> <a href="#">EAS Customs / @eascustoms75</a></span>
+                         <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 09:00 AM - 05:00 PM (Mon-Sat)</span>
+                         <span class="email-icon"><i class="fab fa-facebook-square"></i> <a href="#">EAS Customs / @eascustoms75</a></span>
                     </div>
 
                </div>
@@ -68,27 +70,29 @@
                     </button>
 
                     <!-- lOGO TEXT HERE -->
-                     <img src="images/Logo.png" class="logoo" alt="logo" />
-                     
-                    <a href="index.php" class="navbar-brand">EAS CUSTOMS</a>
+                    <img src="images/Logo.png" class="logoo" alt="logo" />
+
+                    <a href="index.php" class="navbar-brand"> EAS CUSTOMS</a>
+
+
                </div>
 
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                          <li><a href="index.php" class="smoothScroll">Home</a></li>
-                         <li><a href="#about" class="smoothScroll">Services</a></li>
-                         <li><a href="#team" class="smoothScroll">About Us</a></li>
-                         <li><a href="#news" class="smoothScroll">Contact Us</a></li>
-                         <li><a href="#google-map" class="smoothScroll">Reviews</a></li>
-                         <li class="appointment-btn"><a href="login.php?loginrequired=1">Make an appointment</a></li>
+                         <li><a href="index.php" class="smoothScroll">About Us</a></li>
+                         <li><a href="index.php" class="smoothScroll">Services</a></li>
+                         <li><a href="index.php" class="smoothScroll">Featured Cars</a></li>
+                         <li><a href="index.php" class="smoothScroll">The Team</a></li>
+                         <li><a href="index.php" class="smoothScroll">Feedback</a></li>
+                         <li><a href="index.php" class="smoothScroll">Find Us</a></li>
+                         <li class="appointment-btn"><a href="appointment.php">Make an appointment</a></li>
                     </ul>
                </div>
 
           </div>
      </section>
-
-   
    
      <!-- REGISTER PAGE -->
     <div id="appointment-section" style="background-color: #b80011; background: -webkit-linear-gradient(-135deg, #f06d06, #B80011); background: -o-linear-gradient(-135deg, #f06d06, #B80011); background: -moz-linear-gradient(-135deg, #f06d06, #B80011); background: linear-gradient(-135deg, #f06d06, #B80011);">
@@ -220,7 +224,7 @@
 
              
      <!-- FOOTER -->
-<footer data-stellar-background-ratio="5">
+    <footer data-stellar-background-ratio="5">
           <div class="container">
                <div class="row">
 

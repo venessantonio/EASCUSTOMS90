@@ -13,17 +13,14 @@ if (isset($_SESSION['username'])) {
 <html lang="en">
 <head>
 
-     <title>EAS Customs - Login</title>
+       <title>EAS Customs - Register</title>
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <meta name="description" content="">
      <meta name="keywords" content="">
      <meta name="author" content="Tooplate">
-    
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="HandheldFriendly" content="true">
-
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <link rel="stylesheet" href="css/all.css">
      <link rel="icon" href="images/Logo.png">
      <link rel="stylesheet" href="css/bootstrap.min.css">
      <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -34,16 +31,6 @@ if (isset($_SESSION['username'])) {
 
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="css/tooplate-style.css">
-    
-     <!-- LOGIN CSS -->
-     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-     <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-     <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-     <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-     <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-     <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-     <link rel="stylesheet" type="text/css" href="css/util.css">
-   <link rel="stylesheet" type="text/css" href="css/main.css">
 
 
 </head>
@@ -51,9 +38,7 @@ if (isset($_SESSION['username'])) {
      <!-- PRE LOADER -->
      <section class="preloader">
           <div class="spinner">
-
                <span class="spinner-rotate"></span>
-               
           </div>
      </section>
 
@@ -77,9 +62,8 @@ if (isset($_SESSION['username'])) {
                </div>
           </div>
      </header>
-
-
-     <!-- MENU -->
+    
+    <!-- MENU -->
      <section class="navbar navbar-default navbar-static-top" role="navigation">
           <div class="container">
 
@@ -107,7 +91,7 @@ if (isset($_SESSION['username'])) {
                          <li><a href="index.php" class="smoothScroll">Featured Cars</a></li>
                          <li><a href="index.php" class="smoothScroll">The Team</a></li>
                          <li><a href="index.php" class="smoothScroll">Feedback</a></li>
-                         <li><a href="#index.php" class="smoothScroll">Find Us</a></li>
+                         <li><a href="index.php" class="smoothScroll">Find Us</a></li>
                          <li class="appointment-btn"><a href="appointment.php">Make an appointment</a></li>
                     </ul>
                </div>
@@ -115,27 +99,26 @@ if (isset($_SESSION['username'])) {
           </div>
      </section>
 
-   
-   
-     <!-- LOGIN PAGE -->
-  <div class="limiter">
-    <div class="container-login100">
-            <div class="login100-pic js-tilt" data-tilt>
-        <span class="login500-form">
-            Fuels Passion Beyond Full Throttle
-        </span>
-                <span class="login700-form">
-            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+
+     <!-- MENU -->
+     <div id="appointment-section" style="background-color: #b80011; background: -webkit-linear-gradient(-135deg, #f06d06, #B80011); background: -o-linear-gradient(-135deg, #f06d06, #B80011); background: -moz-linear-gradient(-135deg, #f06d06, #B80011); background: linear-gradient(-135deg, #f06d06, #B80011);">
+            <div class="container">
+                <div class="col-xs-5 col-sm-5" style="float: left; max-width:100%; padding-top:20px; padding-left:50px; padding-right:50px; padding-bottom:20px; color:white; display: inline-block; margin-top: 3%; margin-left: 1%; margin-right: 2%; margin-bottom:2%;">   
+                     <span>
+                        Fuels Passion Beyond Full Throttle
+                    </span>
+                    <span>
+                        <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
                     Since 2002
-        </span>
-            </div>
-            
-      <div class="wrap-login100">
-        <form class="login100-form validate-form" id="appointment-form" role="form" method="post" action="login.php">
-          <span class="login100-form-title">
-            Login
-          </span>
-                         <?php if (isset($_SESSION['unauthorized_user'])) : ?>
+                    </span>
+                </div>
+                
+                 <div class="col-xs-6 col-sm-6" style="float:right; max-width:100%; padding-top:20px; padding-left:50px; padding-right:50px; padding-bottom:20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: white; border-radius: 10px; display: inline-block; margin-top: 3%; margin-left: 1%; margin-right: 2%; margin-bottom:2%;">  
+                     <form class="login100-form validate-form" id="appointment-form" role="form" method="post" action="login.php">
+                       <div class="section-title">
+                              <h2 style="letter-spacing: 5px; text-align:center;">Login</h2>
+                         </div>
+                          <?php if (isset($_SESSION['unauthorized_user'])) : ?>
                          <?php 
                            echo $_SESSION['unauthorized_user']; 
                              unset($_SESSION['unauthorized_user']);
@@ -216,49 +199,49 @@ if (isset($_SESSION['username'])) {
                            unset($_SESSION['invalid_password_username']);
                          ?>
                          <?php endif ?>
-
-
-
-          <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-            <input class="input100" type="text" id="username" name="username" placeholder="Username">
-            <span class="focus-input100"></span>
-            <span class="symbol-input100">
-              <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-            </span>
-          </div>
-
-          <div class="wrap-input100 validate-input" data-validate = "Password is required">
-            <input class="input100" type="password" name="password" placeholder="Password">
-            <span class="focus-input100"></span>
-            <span class="symbol-input100">
-              <i class="fa fa-lock" aria-hidden="true"></i>
-            </span>
-          </div>
-          
-          <div class="container-login100-form-btn">
-            <button class="login100-form-btn" name="login_user">
-              Login
-            </button>
-          </div>
-
-          <div class="text-center p-t-12">
-            <a class="txt1" href="register.php">
-              Don't have an account? Register here.
-            </a>
-                        <br>
-          </div>
-                    
-                    <div class="text-center p-t-15">
                         
-                    </div>
+                        <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                        <input type="text" id="username" name="username" placeholder="Username" style="width:100%;">
+                        <span class="symbol-input100">
+                          <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        </span>
+                      </div>
 
-        </form>
-      </div>
+                      <div class="wrap-input100 validate-input" data-validate = "Password is required">
+                        <input class="input100" type="password" name="password" placeholder="Password">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                          <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                      </div>
+
+                      <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" name="login_user">
+                          Login
+                        </button>
+                      </div>
+
+                      <div class="text-center p-t-12">
+                        <a class="txt1" href="register.php">
+                          Don't have an account? Register here.
+                        </a>
+                                    <br>
+                      </div>
+
+                                <div class="text-center p-t-15">
+
+                                </div>
+                         
+                         
+                     </form>
+                </div>
+            </div>
     </div>
-  </div>
 
+
+             
      <!-- FOOTER -->
-<footer data-stellar-background-ratio="5">
+    <footer data-stellar-background-ratio="5">
           <div class="container">
                <div class="row">
 
@@ -310,6 +293,7 @@ if (isset($_SESSION['username'])) {
 
      <!-- SCRIPTS -->
      <script src="js/jquery.js"></script>
+     <script src="js/makeseries.js"></script>
      <script src="js/bootstrap.min.js"></script>
      <script src="js/jquery.sticky.js"></script>
      <script src="js/jquery.stellar.min.js"></script>
@@ -317,19 +301,8 @@ if (isset($_SESSION['username'])) {
      <script src="js/smoothscroll.js"></script>
      <script src="js/owl.carousel.min.js"></script>
      <script src="js/custom.js"></script>
-    
-    
-    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-    <script src="vendor/bootstrap/js/popper.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendor/select2/select2.min.js"></script>
-    <script src="vendor/tilt/tilt.jquery.min.js"></script>
-  <script >
-    $('.js-tilt').tilt({
-      scale: 1.1
-    })
-  </script>
-    <script src="js/main.js"></script>
-    
+     <script src="js/script.js"></script>
+     
+
 </body>
 </html>
