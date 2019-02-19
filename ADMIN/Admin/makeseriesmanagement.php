@@ -238,7 +238,7 @@
                         <div div class="modal fade" id="updateMakeSeries'.$row['id'].'" role="dialog">
                           <div class="modal-dialog modal-dialog" role="document">
                             <div class="modal-content">
-                            <div class="modal-header" style="background-color: #4caf50; color: white; border: 3px solid #4caf50;">
+                            <div class="modal-header" style="background-color: #000099; color: white; border: 3px solid #000099;">
                               <h5 class="modal-title" id="exampleModalLabel">Update Make and Series</h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
@@ -249,7 +249,7 @@
                             <!-- start -->
                             <form action="process/server.php" method="POST">
                               <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">Make</label>
                                     <input type="text" class="form-control" name="make" value="'.$row['make'].'" placeholder="'.$row['make'].'" required="" s pattern="[A-Za-z]{1,20}">
@@ -258,7 +258,7 @@
                               </div>
                               
                               <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">Series</label>
                                     <input type="text" class="form-control" name="series" value="'.$row['series'].'" placeholder="'.$row['series'].'" required="" pattern="^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$">
@@ -270,7 +270,7 @@
                               
                               </div>
                               <div class="modal-footer">
-                                  <button type="submit" class="btn btn-success" name="update_makeseries" style="float:right"><i class="menu-icon mdi mdi-account-convert"></i> Update</button>
+                                  <button type="submit" class="btn btn-darkblue" name="update_makeseries" style="float:right"><i class="menu-icon mdi mdi-account-convert"></i> Update</button>
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="menu-icon mdi mdi-close"></i> Cancel</button>
                                 <div class="clearfix"></div>
                               </form>

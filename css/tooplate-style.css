@@ -143,10 +143,67 @@ http://www.tooplate.com/view/2098-health
 
   .btn-gray {
     background: #393939;
+    color: white;
   }
 
-  .btn-blue {
+  .btn-lightblue {
+    background: #308ee0;
+    color: white;
+  }
+
+  .btn-lightblue:hover {
+    background: #4e9ee4;
+    color: white;
+  }
+
+  .btn-success {
+    background: #4caf50;
+    color: white;
+  }
+
+  .btn-success:hover {
+    background: #71c174;
+    color: white;
+  }
+
+  .btn-danger {
+    background: #f44336;
+    color: white;
+  }
+
+  .btn-danger:hover {
+    background: #f66055;
+    color: white;
+  }
+
+  .btn-red {
     background: #B80011;
+    color: white;
+  }
+
+  .btn-red:hover {
+    background: #e60017;
+    color: white;
+  }
+
+  .btn-darkblue {
+    background: #000099;
+    color: white;
+  }
+
+  .btn-darkblue:hover {
+    background: #0000cc;
+    color: white;
+  }
+
+  .btn-warning {
+    background: #ffaf00;
+    color: white;
+  }
+
+  .btn-warning:hover {
+    background: #ffcf66;
+    color: white;
   }
 
   .news-thumb {
@@ -662,15 +719,18 @@ http://www.tooplate.com/view/2098-health
   }
 
   .news-social-share .btn-primary {
-    background: #3b5998;
+    background: #308ee0;
+    color: white;
   }
 
   .news-social-share .btn-success {
-    background: #1da1f2;
+    background: #4caf50;
+    color: white;
   }
 
   .news-social-share .btn-danger {
-    background: #dd4b39;
+    background: #f44336;
+    color: white;
   }
 
   .news-social-share a .fa {

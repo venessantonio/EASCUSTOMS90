@@ -173,7 +173,7 @@
          <div class="col-xs-12 col-sm-12" style="width:100%; padding:5px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: white; border-radius: 10px;">
              
-             <button type="button" class="btn" data-toggle="modal" data-target="#addVehicle" style="background-color: #B80011;color: white; margin-top:2%; width:175px; float:right; margin-right:6%;"><i class="fa fa-car" aria-hidden="true"></i> &nbsp;Add Vehicle</button>
+             <button type="button" class="btn btn-red" data-toggle="modal" data-target="#addVehicle" style="margin-top:2%; width:175px; float:right; margin-right:6%;"><i class="fa fa-car" aria-hidden="true"></i> &nbsp;Add Vehicle</button>
             <!--MODAL ADD VEHICLES-->
  <div class="modal fade" id="addVehicle" role="dialog">
     <div class="modal-dialog">
@@ -247,8 +247,9 @@
             unset($_SESSION['success']);
           ?>
     <?php endif ?>
-             
-             <table class="table table-hover table-bordered " id="doctables" >
+    
+    <div class="table-responsive">
+    <table class="table table-hover table-bordered " id="doctables" >
       <thead style="background-color: #212529;color: white;">
         <tr>
           <th style="text-align:center; font-size: 18px;">Plate Number</th>
@@ -258,11 +259,11 @@
           <th style="text-align:center; font-size: 18px;">Actions</th>
         </tr>
       </thead>
-      <tbody>
-
+        
+        
+      <tbody class="table-primary" style="color:black;">
 
   <!-- MAIN VIEW VEHICLES -->
-  
      <?php
 
          if ($vehicleinforesultCheck > 0) {
@@ -485,6 +486,7 @@
 
     </tbody>
   </table>
+             </div>
               
             
             

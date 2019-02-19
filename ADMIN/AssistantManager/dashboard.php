@@ -30,7 +30,7 @@
    scroll-behavior:smooth; 
      }
        .detail:hover{
-         background-color:#FAF0E6;
+         background-color:#e6e6e6; 
          cursor:pointer;
      }
        td a { 

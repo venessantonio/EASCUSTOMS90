@@ -13763,11 +13763,8 @@ input:focus {
 /* Sidebar */
 
 .sidebar {
-  background-attachment: fixed;
-  background-image: url("../images/sideimage.jpg");
-  background-repeat: no-repeat;
-
   min-height: calc(100vh - 63px);
+  background: #ffffff;
   font-family: "Poppins", sans-serif;
   padding: 0;
   width: 255px;
@@ -13825,8 +13822,8 @@ input:focus {
           -webkit-transform: rotate(90deg);
           transform: rotate(90deg); }
       .sidebar .nav .nav-item .nav-link .menu-icon {
-        margin-right: 1.25rem;
-        width: 16px;
+        margin-right: 1.10rem;
+        width: 1px;
         line-height: 1;
         font-size: 18px;
         color: #979797; }
@@ -13844,7 +13841,11 @@ input:focus {
       .sidebar .nav .nav-item .nav-link:hover {
         background-color:#d9d9d9 ; }
     .sidebar .nav .nav-item.active > .nav-link {
-      background-color: #b80011; 
+      background: red;
+  background: -webkit-linear-gradient(-135deg, #B80011, #f06d06);
+  background: -o-linear-gradient(-135deg, #B80011, #f06d06);
+  background: -moz-linear-gradient(-135deg, #B80011, #f06d06);
+  background: linear-gradient(-135deg, #B80011, #f06d06);
       color: white; }/**/
       .sidebar .nav .nav-item.active > .nav-link .menu-title,
       .sidebar .nav .nav-item.active > .nav-link i {
@@ -13959,12 +13960,16 @@ input:focus {
 
 /* Navbar */
   #navhead.scrolled {
-    background-color:white;
+    background-color: white; 
 }
 
 .navbar.default-layout {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(120deg, #e5e5e55c, #e5e5e55c);
+background: red;
+  background: -webkit-linear-gradient(-135deg, #B80011, #f06d06);
+  background: -o-linear-gradient(-135deg, #B80011, #f06d06);
+  background: -moz-linear-gradient(-135deg, #B80011, #f06d06);
+  background: linear-gradient(-135deg, #B80011, #f06d06);
   transition: background 0.25s ease;
   -webkit-transition: background 0.25s ease;
   -moz-transition: background 0.25s ease;

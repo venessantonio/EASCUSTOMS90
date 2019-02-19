@@ -190,6 +190,7 @@
                           </th>
                         </tr>
                       </thead>
+                      
                       <tbody class="table-primary" style="color:black;">
                         <?php
                             $data = $connection->prepare("SELECT * FROM `personalinfo` join `vehicles` WHERE personalinfo.personalId 

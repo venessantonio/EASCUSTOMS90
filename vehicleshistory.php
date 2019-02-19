@@ -174,7 +174,8 @@ $personalinfo -> personal_info();
         
                  <h3 align="center" style="margin-top:4%;">Vehicle History</h3>
                 <br>
-                    
+                
+                <div class="table-responsive">
                 <table class="table table-hover table-bordered" id="doctables">
                   <thead style="background-color: #212529; color: white;">
                     <tr>
@@ -184,7 +185,7 @@ $personalinfo -> personal_info();
                     </tr>
                   </thead>
                     
-                <tbody>
+                <tbody class="table-primary" style="color:black;">
                     
       <!--Vehicle History -->
                  <?php
@@ -258,7 +259,8 @@ $personalinfo -> personal_info();
                       </tr>
                </tbody>
                     
-      </table>
+                    </table>
+                    </div>
             </div>      
         </div> 
     </div>

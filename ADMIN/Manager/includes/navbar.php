@@ -12,13 +12,15 @@
 </head>
 
 <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row" id="navhead">
-    <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center custom">
-        <img src="images/Logo.png" class="logoo" alt=""/>
-        <a class="navbar-brand" href="dashboard.php" style="color: #b80011; margin-top: 5px; margin-left: 3px;">
-          <strong>EAS CUSTOMS</strong>
+    <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
+        <a class="navbar-brand brand-logo" href="index.html"  style="color: #b80011; margin-top: 5px; margin-left: 3px;">
+            <strong>EAS CUSTOMS</strong>
         </a>
-    </div>
-        <div class="navbar-menu-wrapper d-flex align-items-center custom" style="color:#b80011";>
+        <a class="navbar-brand brand-logo-mini" href="index.html" style=" width:100%; background-color:white; ">
+          <img src="images/Logo.png" class="logoo" alt="" style="width:100%;height:100%;"/>
+        </a>
+      </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center custom" style="color:white";>
          
         <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
             <li class="nav-item">
@@ -26,29 +28,33 @@
         </ul>
             
         <ul class="navbar-nav navbar-nav-right">
+
+
             <li class="nav-item dropdown">
             <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" data-toggle="dropdown">
                 <span class="count">0</span>
-                <i class="mdi mdi-bell"></i>
+                <i class="mdi mdi-bell" style="color:white;"></i>
             </a>
             <ul class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" id="dropdownnotif">     
            </ul>
-            </li>
+            </li> 
 
+        
 
-
-            <li class="nav-item dropdown d-none d-xl-inline-block">
+            <li class="nav-item dropdown d-none d-xl-inline-block" style="color:white;">
             <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                <span class="profile-text" style="font-size:14px; font-weight:bold;">Hello <?php echo $Name = $_SESSION['Name']; ?>
+                <span class="profile-text" style="font-size:14px; color:white;">Hello <?php echo $Name = $_SESSION['Name']; ?>
                  (<?php echo $type = $_SESSION['type']; ?>)
                 </span>
-                <img class="img-xs rounded-circle" src="images/faces-clipart/pic-2.png" alt="Profile image">
+              
             </a>
+                
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-                <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal"><i class="menu-icon mdi mdi-logout-variant"></i>Logout
+                <a class="dropdown-item mt-2" data-toggle="modal" data-target="#exampleModal"><i class="menu-icon mdi mdi-logout-variant"></i>Logout
                 </a>
             </div>
             </li>
+            
         </ul>
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
             <span class="mdi mdi-menu"></span>

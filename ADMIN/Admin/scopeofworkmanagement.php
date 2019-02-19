@@ -254,8 +254,8 @@
                         <div div class="modal fade" id="updateSpareParts'.$row['id'].'" role="dialog">
                           <div class="modal-dialog modal-dialog" role="document">
                             <div class="modal-content">
-                            <div class="modal-header" style="background-color: #4caf50; color: white; border: 3px solid #4caf50;">
-                              <h5 class="modal-title" id="exampleModalLabel">Update Spare Parts</h5>
+                            <div class="modal-header" style="background-color: #000099; color: white; border: 3px solid #000099;">
+                              <h5 class="modal-title" id="exampleModalLabel">Update Scope of Work</h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                               </button>
@@ -264,7 +264,7 @@
                             <!-- start -->
                             <form action="process/server.php" method="POST">
                               <div class="row">
-                                <div class="col-md-10">
+                                <div class="col-md-12">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">Scope Type</label>
                                     <input type="text" class="form-control" name="scope" value="'.$row['scopeWork'].'" placeholder="'.$row['scopeWork'].'"  autocomplete="off" required="" pattern="^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$">
@@ -272,7 +272,7 @@
                                 </div>
                               </div>
                               <div class="row">
-                                <div class="col-md-10">
+                                <div class="col-md-12">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">Sub Scope</label>
                                     <input type="text" class="form-control" name="sub" value="'.$row['subScope'].'" placeholder="'.$row['subScope'].'"  autocomplete="off" required="" pattern="^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$">
@@ -281,7 +281,7 @@
                                 </div>
                               </div>
                               <div class="row">
-                                <div class="col-md-10">
+                                <div class="col-md-12">
                                   <div class="form-group">
                                     <label class="bmd-label-floating">Price</label>
                                     <input type="text" class="form-control" name="price" value="'.$row['price'].'" placeholder="'.$row['price'].'"  autocomplete="off" required pattern="[0-9]{1,20}">
@@ -291,7 +291,7 @@
                               <!-- end -->
                               </div>
                               <div class="modal-footer">
-                                  <button type="submit" class="btn btn-success" name="update_scope" style="float:right"><i class="menu-icon mdi mdi-account-convert"></i> Update</button>
+                                  <button type="submit" class="btn btn-darkblue" name="update_scope" style="float:right"><i class="menu-icon mdi mdi-account-convert"></i> Update</button>
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="menu-icon mdi mdi-close"></i> Cancel</button>
                                 <div class="clearfix"></div>
                               </form>

@@ -27,17 +27,11 @@ $appointmentinfo -> appointment_info_activeschedule();
 
 <head>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Appointment Request</title>
   <link rel="icon" href="images/Logo.png">
-    
   <!-- plugins:css -->
   <link rel="stylesheet" href="vendors/iconfonts/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
@@ -51,15 +45,9 @@ $appointmentinfo -> appointment_info_activeschedule();
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
   <link href="css/dataTables.bootstrap4.css" rel="stylesheet">
-
-
-   <link rel="stylesheet" href="css/normalize.css"  type="text/css"/>
-   <link rel="stylesheet" href="css/datepicker.css"  type="text/css"/> 
     
-    
-     <!-- DatePicker dont move to another line -->
-
-     <!-- Notification Jquery Library -->
+<link rel="stylesheet" href="css/normalize.css"  type="text/css"/>
+   <link rel="stylesheet" href="css/datepicker.css"  type="text/css"/>
      
      <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
      <script> 
@@ -82,8 +70,7 @@ $appointmentinfo -> appointment_info_activeschedule();
     <div class="container-fluid page-body-wrapper">
     <!-- partial:partials/_sidebar.html -->
     
-         
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav" style="position:fixed;">
         <hr class="style2">
             
@@ -219,12 +206,12 @@ $appointmentinfo -> appointment_info_activeschedule();
                      
                         <div class="col-md-8 col-sm-8">
                             <ul style="text-align:justify; font-size:16px;list-style: none;">
-<div class="service-detail" id="mechanical_service" style="display: none; text-align:justify;">    
+                                <div class="service-detail" id="mechanical_service" style="display: none; text-align:justify;">    
                           <?php
                           if ($mechanicalservicearrayCheck > 0) {
                             while ($mechanicalservice = mysqli_fetch_assoc($mechanicalservicearray)) {
                           ?>
-                           <div class="col-md-4 col-sm-4">
+                           <div class="col-md-5 col-sm-5">
                                <input type="checkbox" name="service[]" id="<?= $mechanicalservice['serviceName']; ?>"  value="<?= $mechanicalservice['serviceName']; ?>"><?= $mechanicalservice['serviceName']; ?><br>
                                </div>
                           <?php 
@@ -242,7 +229,7 @@ $appointmentinfo -> appointment_info_activeschedule();
                           if ($electricalservicearrayCheck > 0) {
                             while ($electricalservice = mysqli_fetch_assoc($electricalservicearray)) {
                           ?>
-                           <div class="col-md-4 col-sm-4">
+                           <div class="col-md-5 col-sm-5">
                                <input type="checkbox" name="service[]" id="<?= $electricalservice['serviceName']; ?>"  value="<?= $electricalservice['serviceName']; ?>"><?= $electricalservice['serviceName']; ?><br>
                                </div>
                           <?php 
@@ -260,7 +247,7 @@ $appointmentinfo -> appointment_info_activeschedule();
                           if ($paintservicearrayCheck > 0) {
                             while ($paintservice = mysqli_fetch_assoc($paintservicearray)) {
                           ?>
-                           <div class="col-md-4 col-sm-4">
+                           <div class="col-md-5 col-sm-5">
                                <input type="checkbox" name="service[]" id="<?= $paintservice['serviceName']; ?>"  value="<?= $paintservice['serviceName']; ?>"><?= $paintservice['serviceName']; ?><br>
                                </div>
                           <?php 
@@ -270,7 +257,8 @@ $appointmentinfo -> appointment_info_activeschedule();
                                  <p> NO PAINT SERVICE </p>
                               <?php
                               }
-                              ?>   
+                              ?> 
+                        </div>
                     
                         <div class="service-detail" id="body_Repair" style="display: none; text-align:justify;">
                                <input type="checkbox" name="service[]" value="Body Repair">Request for Body Repair.
@@ -384,6 +372,19 @@ $appointmentinfo -> appointment_info_activeschedule();
     <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <script src="vendors/js/vendor.bundle.addons.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/misc.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="js/dashboard.js"></script>
+  <!-- End custom js for this page-->
 
   <script src="js/script.js"></script>
   <script src="js/uservehicle.js"></script>
