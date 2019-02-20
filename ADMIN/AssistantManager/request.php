@@ -42,48 +42,7 @@ $appointmentinfo -> appointment_info_activeschedule();
   <link rel="shortcut icon" href="images/favicon.png" />
   <link href="css/dataTables.bootstrap4.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/normalize.css"  type="text/css"/>
-  <link rel="stylesheet" href="css/datepicker.css"  type="text/css"/> 
-    
-    
-     <!-- DatePicker dont move to another line -->
 
-     <!-- Notification Jquery Library -->
-     
-     <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-     <script> 
-      var $jq171 = jQuery.noConflict(true);
-      </script>
-
-
-     <script> 
-      window.jQuery = $jq171;
-     </script>
-     <script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
-     <script type="text/javascript" src="js/jquery2.js"></script>
-
-      <script type="text/javascript">
-      var unavailableDates  = [<?php
-      foreach($appointmentinfo->appointment_info as $appointmentinfo):
-      ?>"<?= date('d-n-o', strtotime($appointmentinfo['date'])); ?>",
-      <?php     
-      endforeach;
-      ?>];
-
-      function unavailable(date) {
-      dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
-      if ($jq171.inArray(dmy, unavailableDates) == -1) {
-      return [true, ""];
-      } else {
-      return [false, "", "Unavailable"];
-      }
-      }
-
-      function noWeekend(date){
-      var noWeekend = $jq171.datepicker.noWeekends(date);
-      return noWeekend[0] ? unavailable(date) : noWeekend;
-      }
-     </script>
 
 </head>
 
@@ -98,7 +57,23 @@ $appointmentinfo -> appointment_info_activeschedule();
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav" style="position:fixed;">
         <hr class="style2">
-            
+          <li class="nav-item nav-profile">
+            <div class="nav-link">
+              <div class="user-wrapper">
+                <div class="profile-image">
+                  <img src="images/faces/pic-2.png" alt="profile image">
+                </div>
+                <div class="text-wrapper">
+                  <p class="profile-name"><?php echo $Name = $_SESSION['Name']; ?>
+                 </p>
+                  <div>
+                    <small class="designation text-muted"><?php echo $type = $_SESSION['type']; ?></small>
+                    <span class="status-indicator online"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>            
           <li class="nav-item">
             <a class="nav-link" href="dashboard.php">
               <i class="menu-icon mdi mdi-view-dashboard"></i>

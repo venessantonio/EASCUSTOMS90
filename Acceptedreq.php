@@ -96,8 +96,6 @@
      </header>
 
 
-          </script>
-
     <!-- MENU -->
     <section class="navbar navbar-default navbar-static-top" role="navigation" >
           <div class="container">

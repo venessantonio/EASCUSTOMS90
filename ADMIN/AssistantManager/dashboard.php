@@ -2,12 +2,24 @@
 <?php require "process/require/dataconf.php";?>
 <?php require "process/check/dashboardcheck.php";?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <!-- Required meta tags -->
+    
+    <script>
+       $(function () {
+  $(document).scroll(function () {
+    var $nav = $("#navhead");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
+    </script>
+<script src="js/jquery2.js"></script> 
+    
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Dashboard</title>
@@ -53,6 +65,24 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav" style="position:fixed;">
         <hr class="style2">
+          
+          <li class="nav-item nav-profile">
+            <div class="nav-link">
+              <div class="user-wrapper">
+                <div class="profile-image">
+                  <img src="images/faces/pic-2.png" alt="profile image">
+                </div>
+                <div class="text-wrapper">
+                  <p class="profile-name"><?php echo $Name = $_SESSION['Name']; ?>
+                 </p>
+                  <div>
+                    <small class="designation text-muted"><?php echo $type = $_SESSION['type']; ?></small>
+                    <span class="status-indicator online"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
             
           <li class="nav-item">
             <a class="nav-link" href="dashboard.php">

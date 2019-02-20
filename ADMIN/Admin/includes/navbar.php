@@ -31,29 +31,23 @@
 
 
             <li class="nav-item dropdown">
-            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" data-toggle="dropdown">
-                <span class="count">0</span>
-                <i class="mdi mdi-bell" style="color:white;"></i>
-            </a>
+                <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" data-toggle="dropdown">
+                    <span class="count">0</span>
+                    <i class="mdi mdi-bell" style="color:white;"></i>
+                </a>
             <ul class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" id="dropdownnotif">     
-           </ul>
+           </ul>  
+            </li> 
+
+           <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                    <i class="mdi mdi-logout-variant" style="color:white;"></i>
+                </a>
             </li> 
 
         
 
-            <li class="nav-item dropdown d-none d-xl-inline-block" style="color:white;">
-            <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                <span class="profile-text" style="font-size:14px; color:white;">Hello <?php echo $Name = $_SESSION['Name']; ?>
-                 (<?php echo $type = $_SESSION['type']; ?>)
-                </span>
-              
-            </a>
-                
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-                <a class="dropdown-item mt-2" data-toggle="modal" data-target="#exampleModal"><i class="menu-icon mdi mdi-logout-variant"></i>Logout
-                </a>
-            </div>
-            </li>
+           
             
         </ul>
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">

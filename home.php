@@ -121,43 +121,41 @@ $personalinfo -> personal_info();
 
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav ">
-                     <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#" ><?php  if (isset($_SESSION['username'])) : ?><p> <i class="fas fa-user-circle"></i> Welcome <?php echo $_SESSION['username']; ?> <span class="caret"></span></p>
-                  </a>
-                  <ul class="dropdown-menu" id="dropdownaccount">
-                     <li><a  href="accountsettings.php" style="font-size: 13px;z-index: 9999;"><i class="fa fa-cogs" aria-hidden="true"></i> Account Settings</a></li>
-                    <li><a  href="process/logout.php" style="color: red;font-size: 13px;z-index: 9999;"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
-                    </li>
-                  </ul>
-                  </li>
-                  <?php endif ?>
+                   
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#" >
+                          <?php  if (isset($_SESSION['username'])) : ?><p> <i class="fas fa-user-circle"></i> Welcome <?php echo $_SESSION['username']; ?> <span class="caret"></span></p>
+                      </a>
+                      <ul class="dropdown-menu" id="dropdownaccount">
+                        <li><a  href="accountsettings.php" style="font-size: 13px;z-index: 9999;"><i class="fa fa-cogs" aria-hidden="true"></i> Account Settings</a></li>
+                        <li><a  href="process/logout.php" style="color: red;font-size: 13px;z-index: 9999;"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+                        </li>
+                      </ul>
+                      </li>
+                      <?php endif ?>
                 </ul>
                     
                     <ul class="nav navbar-nav navbar-right">
                           
                         <li><a href="vehicleshistory.php" class="smoothScroll"><i class="fas fa-history"></i> Vehicle History  <span class="label label-pill label-danger count1" style="border-radius:10px;padding:6px;"></span></a></li>
                         <li><a href="vehiclesinfo.php" class="smoothScroll"><i class="fas fa-car"></i> Your Vehicles</a></li>  
-                        <li class="dropdown">
                        
-                        
-                        
-                <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#" ><i class="far fa-calendar-check"></i> Request Status<span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu" id="dropdownaccount">
-                     <li><a  href="Acceptedreq.php" style="font-size: 13px;z-index: 9999;">Accepted Request</a></li>
-                     <li><a  href="Pendingreq.php" style="font-size: 13px;z-index: 9999;">Pending Request</a>
-                    </li>
-                     <li><a  href="Declinedreq.php" style="font-size: 13px;z-index: 9999;">Declined Request</a>
-                    </li>
-                    <li><a  href="Rescheduledreq.php" style="font-size: 13px;z-index: 9999;">Rescheduled Request</a>
-                    </li>
-                  </ul>
-                  </li>
+                        <li class="dropdown">
+                          <a class="dropdown-toggle" data-toggle="dropdown" href="#" ><i class="far fa-calendar-check"></i> Request Status<span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu" id="dropdownaccount">
+                             <li><a  href="Acceptedreq.php" style="font-size: 13px;z-index: 9999;">Accepted Request</a></li>
+                             <li><a  href="Pendingreq.php" style="font-size: 13px;z-index: 9999;">Pending Request</a>
+                            </li>
+                             <li><a  href="Declinedreq.php" style="font-size: 13px;z-index: 9999;">Declined Request</a>
+                            </li>
+                            <li><a  href="Rescheduledreq.php" style="font-size: 13px;z-index: 9999;">Rescheduled Request</a>
+                            </li>
+                          </ul>
+                        </li>
                 
-             
-                        
+              
                         <li class="dropdown">
                          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell" aria-hidden="true" style="font-size: 20px;padding: 0;"></i>  <span class="label label-pill label-danger count" style="border-radius:10px;"></span></a>
                          <ul class="dropdown-menu" id="dropdownnotif" aria-labelledby="dropdownMenuDivider"></ul>
