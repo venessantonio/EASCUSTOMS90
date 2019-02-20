@@ -717,7 +717,7 @@ include 'process/databaseconnect.php';
                         <hr/>
                         <div class="review-block">         
                           <?php
-                            $ratinguery = "SELECT ratingId, ratingNumber, name, comments, created, modified FROM feedback";
+                            $ratinguery = "SELECT ratingId, ratingNumber, name, comments, created, modified FROM feedback ORDER BY created DESC";
                             $ratingResult = mysqli_query($conn, $ratinguery) or die("database error:". mysqli_error($conn));
                             while($rating = mysqli_fetch_assoc($ratingResult)){
                             $date=date_create($rating['created']);

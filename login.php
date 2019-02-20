@@ -118,7 +118,7 @@ if (isset($_SESSION['username'])) {
                         
                        
                         
-                        <div class="col-md-5 col-sm-5" style="max-width:100%; padding-top:30px; padding-bottom:30px; padding-left:50px; padding-right:50px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: white; border-radius: 10px;">
+                        <div class="col-md-5 col-sm-5" style="max-width:100%; padding-top:30px; padding-bottom:30px; padding-left:50px; padding-right:50px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: white; border-radius: 10px;">
                             <div style="margin-top: 5%; margin-bottom: 7%;width: auto;">
                                <form class="login100-form validate-form" id="appointment-form" role="form" method="post" action="login.php">
                          
@@ -210,7 +210,7 @@ if (isset($_SESSION['username'])) {
                         
                         <div class="form-group" data-validate = "Valid email is required: ex@abc.xyz" style="text-align:center; border: 2px solid #ddd; display: flex; flex-direction: row; border-radius: 8px;">
                             
-                            <input type="text" class="form-control" name="username" placeholder="Username" required style="width:100%; display: inline-block; border: none; flex: 1; padding: 20px;"> 
+                            <input type="text" class="form-control" name="username" placeholder="Username" style="width:100%; display: inline-block; border: none; flex: 1; padding: 20px;"> 
                             &nbsp;
                             <span class="symbol-input100" style="background: #ddd; padding: 10px;">
                               <i class="fas fa-user-circle" style="font-size:20px;"></i>
@@ -219,7 +219,7 @@ if (isset($_SESSION['username'])) {
 
                       <div class="form-group" data-validate = "Password is required" style="text-align:center; border: 2px solid #ddd; display: flex; flex-direction: row; border-radius: 8px;">
 
-                            <input type="password" class="form-control" name="password" placeholder="Password" required style="width:100%; display: inline-block; border: none; flex: 1; padding: 20px; ">
+                            <input type="password" class="form-control" name="password" placeholder="Password" style="width:100%; display: inline-block; border: none; flex: 1; padding: 20px; ">
                             &nbsp;
                             <span class="symbol-input100" style="background: #ddd; padding: 10px;">
                               <i class="fa fa-lock" style="font-size:20px;"></i>
